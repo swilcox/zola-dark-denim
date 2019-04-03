@@ -1,0 +1,62 @@
+# The URL the site will be built for
+base_url = "https://wilcox.be"
+
+# Whether to automatically compile all Sass files in the sass directory
+compile_sass = false
+
+# Whether to do syntax highlighting
+# Theme can be customised by setting the `highlight_theme` variable to a theme supported by Zola
+highlight_code = false
+
+# Whether to build a search index to be used later on by a JavaScript library
+build_search_index = false
+title = "Steven Wilcox"
+description = "just a fleeting shadow..."
+
+[extra]
+site_title = "Wilcox.be"
+
+[[extra.menu]]
+  title = "Home"
+  url = "/"
+  match = "/"
+  
+[[extra.menu]]
+  title = "Posts"
+  url = "/post/"
+  match = "post/"
+
+[[extra.menu]]
+  title = "About"
+  url = "/about/"
+  match = "about/"
+
+[[extra.social]]
+  medium = "Twitter"
+  icon = "twitter"
+  link = "https://twitter.com/swilcox"
+
+[[extra.social]]
+  medium = "Facebook"
+  icon = "facebook"
+  link = "https://www.facebook.com/scwilcox"
+
+[[extra.social]]
+  medium = "Github"
+  icon = "github"
+  link = "https://github.com/swilcox"
+
+[[extra.social]]
+  medium = "LinkedIn"
+  icon = "linkedin"
+  link = "https://linkedin.com/in/scwilcox"
+
+[[extra.social]]
+  medium = "Flickr"
+  icon = "flickr"
+  link = "https://www.flickr.com/photos/wilcoxzone"
+
+[[extra.social]]
+  medium = "QRZ"
+  icon = "bolt"
+  link = "https://www.qrz.com/lookup/kk4sw"

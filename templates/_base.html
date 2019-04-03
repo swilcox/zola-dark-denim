@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Need to replace this with something">
+    <title>{{ config.title }}</title>
+    <link rel="stylesheet" href="{{ get_url(path='css/main.css') }}">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/manifest.json">
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="theme-color" content="#ffffff">
+</head>
+<body>
+    {% block menu %}
+    <div class="wrapper">
+        <div class="message">
+        <h1>{{ config.title }}</h1>
+        <div class="subtitle">{{ config.description | safe }}</div>
+            {% block social_icons %}
+            <nav class="nav">
+                <ul class="nav-list">
+                    {% for social in config.extra.social %}
+                        <li class="nav-item"><a href="{{ social.link | safe }}" class="fa fa-{{ social.icon }}"><span class="label">{{ social.medium }}</span></a></li>
+                    {% endfor %}
+                </ul>
+            </nav>                
+            {% endblock social_icons %} 
+        </div>
+    </div>
+    {% endblock menu %}
+    <div class="content">
+        {% block content %}
+        {% endblock content %}
+    </div>
+    {% block analytics %}
+    {% endblock %}
+</body>
+</html>
